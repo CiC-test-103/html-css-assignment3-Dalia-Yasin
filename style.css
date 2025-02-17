@@ -48,6 +48,182 @@ h1, h2, h3, h4, h5, h6 {
 
 /** Your CSS Below **/
 
+
+body {
+  font-family: var(--fs-base);
+  font-size: var(--font-paragraph);
+  color: var(--clr-stone600);
+  background-color: var(--clr-stone100);
+  line-height: 1.6;
+
+  display: flex; /* allows for flexible and responsive layout structur*/
+  flex-direction: column; /* stack elements vertically */
+  justify-content: flex-start; /* align content from the top */
+  align-items: center; /* center the content horizontally */
+  min-height: 100vh; /* ensures content fills viewport so element will always take up at least the full height of the screen. */
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background-color: white;
+  max-width: 720px; /* ensures maximum width of 720px */
+  padding: 32px;
+  border-radius: 16px; /* makes the corners rounded */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow (box-shadow) for floating effect */
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%; /* ensures the image scales to fit the container (width: 100%) */
+  border-radius: 12px; /* adds rounded corners (border-radius: 12px;) */
+}
+
+/* Title */
+.recipe-title {
+  font-family: var(--fs-accent);
+  font-size: var(--font-header);
+  color: var(--clr-stone900);
+  margin-top: 20px;
+}
+
+/* Recipe Description */
+.recipe-description {
+  margin-top: 12px; /* adds top margin for spacing */
+  color: var(--clr-stone600); /* custom fonts and colours from variables.css */
+}
+
+/* Preparation Time Section */
+.prep-time {
+  background-color: var(--clr-rose50); /* adds a light background colour */
+  padding: 16px;
+  border-radius: 10px; /* rounded corners */
+  margin-top: 20px;
+}
+
+.prep-time h2 {
+  font-size: var(--font-sub-header); 
+  font-family: var(--fs-accent);
+  color: var(--clr-rose800);
+  margin-bottom: 8px;
+}
+
+.prep-time ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.prep-time li {
+  margin-bottom: 5px;
+}
+
+/* Ingredients Section */
+h2 {
+  font-size: var(--font-sub-header); /* styles <h2> header using variables */
+  font-family: var(--fs-accent);
+  color: var(--clr-brown800);
+  margin-top: 24px;
+}
+
+.ingredients-list {
+  margin-top: 8px; /* adds spacing between ingredients */
+  padding-left: 24px;
+}
+
+.ingredients-list li {
+  margin-bottom: 6px; /* adds spacing between ingredients */
+}
+
+/* Instructions Section */
+.instructions-list {
+  margin-top: 8px; /* adds spacing between instructions */
+  padding-left: 24px;
+}
+
+.instructions-list li {
+  margin-bottom: 10px; /* applies bottom margin (spacing) to each <li> (list item)*/
+}
+
+.instructions-list strong {
+  color: var(--clr-brown800); /* highlights important text using <strong> */
+}
+
+/* Nutrition Table */
+.nutrition-section {
+  margin-top: 30px;
+  background-color: white; /* keep the table background white */
+  padding: 20px;
+  border-radius: 12px; /* rounded corners */
+}
+
+.nutrition-table {
+  width: 100%; /* ensures the table spans the full width of its container */
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+/* Column Formatting */
+.nutrition-table th,
+.nutrition-table td {
+  text-align: left;  /* align text to the left */
+  padding: 12px 16px; /* add padding for better spacing */
+  border-bottom: 1px solid var(--clr-stone150); /* light border between rows */
+}
+
+/* Keep the table background white */
+.nutrition-table th {
+  font-weight: var(--fw-bold);
+  background-color: white; /* ensure the background remains white */
+}
+
+.nutrition-table td {
+  color: var(--clr-stone900);
+}
+
+/* Remove bottom border on the last row */
+.nutrition-table tr:last-child td {
+  border-bottom: none;
+}
+
+/*
+   Make important values bold in the Nutrition Table 
+   This ensures key nutritional values (e.g., calories, protein, fat) stand out.
+*/
+.nutrition-table td strong { 
+  color: var(--clr-brown800);/* sets the text color to a deep brown shade for emphasis */
+  font-size: 18px;
+}
+
+/* FOOTER STYLES */
+.footer {
+  background-color: var(--clr-stone100); /* light background to match the theme */
+  text-align: center; /* centers all content inside the footer */
+  padding: 20px;
+  font-size: 14px;
+  color: var(--clr-stone900);
+  border-top: 1px solid var(--clr-stone150); /* adds a subtle top border */
+  margin-top: 40px; /* ensures space between content & footer */
+  width: 100%; /* ensures the footer stretches across the full width of the page */
+}
+
+/* Attribution inside footer */
+.attribution {
+  margin-top: 10px;  /* adds spacing above the attribution to separate it from other content */
+  font-size: 12px;
+  color: var(--clr-stone600);
+}
+
+.attribution a {
+  color: var(--clr-rose800); 
+  text-decoration: none; /* removes the default underline from links for a cleaner look */
+  font-weight: var(--fw-bold);
+}
+
+.attribution a:hover {
+  /* Underlines the link when hovered over to enhance usability */
+  text-decoration: underline;
+}
+
 /** Attribution CSS **/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
